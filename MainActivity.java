@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG ="";
+    private static final String TAG ="Whack-A-Mole";
     private Button middle_button;
     private Button right_button;
     private Button left_button;
@@ -91,10 +91,13 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.zero:{
                     if (left_button.getText() == "*" ){
                         score += 1;
+                        Log.d(TAG, "Hit, score added!");
                     }
                     else {
                         score -= 1;
+                        Log.d(TAG, "Missed, score deducted!");
                     }
+                    Log.d(TAG, "Left button is clicked!");
                     textView.setText("Score is: " + score);
                     setNewMole();
                     break;
@@ -102,10 +105,13 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.one:{
                     if (middle_button.getText() == "*"){
                         score += 1;
+                        Log.d(TAG, "Hit, score added!");
                     }
                     else{
                         score -= 1;
+                        Log.d(TAG, "Missed, score deducted!");
                     }
+                    Log.d(TAG, "Middle button is clicked!");
                     textView.setText("Score is: " + score);
                     setNewMole();
                     break;
@@ -113,10 +119,13 @@ public class MainActivity extends AppCompatActivity {
                 default:{
                     if (right_button.getText() == "*"){
                         score += 1;
+                        Log.d(TAG, "Hit, score added!");
                     }
                     else{
                         score -= 1;
+                        Log.d(TAG, "Missed, score deducted!");
                     }
+                    Log.d(TAG, "Right button is clicked!");
                     textView.setText("Score is: " + score);
                     setNewMole();
                     break;
